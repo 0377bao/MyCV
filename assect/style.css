@@ -23,11 +23,20 @@ html {
 }
 
 body {
+    height: 100vh;
+    min-width: 100wh;
+    position: relative;
     background-color: var(--color-background);
 }
 
 .app {
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    backdrop-filter: blur(2px);
 }
 
 .wide {
@@ -181,7 +190,8 @@ body {
 
 .app__content__img {
     width: 160%;
-    transform: translate(-130px, -197px);;
+    transform: translate(-130px, -197px);
+    pointer-events: none;
 }
 
 .app__content__signature {
